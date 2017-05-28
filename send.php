@@ -2,8 +2,8 @@
 $name = $_POST['name'];
 $message = $_POST['message'];
 
-$data = '<p>' . $name . ': ' . $message . '</p>' . PHP_EOL;
-$fp = fopen('messages.php', 'a');
+$data = $name . ': ' . $message . PHP_EOL;
+$fp = fopen('messages.txt', 'a');
 fwrite($fp, $data);
 
 
